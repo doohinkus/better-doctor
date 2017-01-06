@@ -6,20 +6,20 @@
 
 ## Description
 
-_This page demonstrates understanding of modern Javascript applications. It uses the Better Doctor Api to retrieve information about available doctors in Portland, OR._
+_This page demonstrates understanding of modern Javascript applications. It uses the Better Doctor Api to retrieve information about available doctors in Portland, OR. Simply type your ailment into the search box, then hit "Find Doctors." The page will display a list of doctors with their specialities, locations, and ratings._
 
 ## Setup/Installation Requirements
 
 * _Clone repository._
 * _Open terminal (This repository requires Node.js to be installed on your machine)_
-* _From terminal navigate to repository directory. Type "npm install"_
+* _From terminal navigate to repository directory._
 * _Type "npm install"_
 * _Type "bower install"_
 * _Type "gulp serve"_
 * _the project should automatically launch._
 
 
-_For this application I used Bourbon & Bitters instead of Bootstrap, modifying the CSS Build task, forcing it to watch all directories in my scss folder. I prefer using Bourbon & Bitters instead of Bootstrap._
+_For this application I used Bourbon & Bitters instead of Bootstrap, modifying the CSS Build task, forcing it to watch all directories in my scss folder._
 
 ## Known Bugs
 
