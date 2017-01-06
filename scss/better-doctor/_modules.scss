@@ -17,19 +17,42 @@
   }
 }
 .doctors{
+  overflow: hidden;
   display: flex;
   flex-wrap: wrap;
   width: $width;
   margin: auto;
   @extend .padding;
   .doctor{
-    width: 100%;
+    border-top: 1px solid lighten($color-secondary, 40%);
+    margin-top: 2em;
     margin-bottom: 2em;
-    display: flex;
-    flex-direction: column;
-    .title, .info{
-      display: flex;
-      justify-content:space-around;
+    @extend .padding;
+    background-color: lighten($color-secondary, 54%);
+    width: 100%;
+    .info--personal{
+      width: 40%;
+      float: left;
+
+      & > img{
+
+        padding: $padding;
+      }
+
+
+    }
+  }
+  .info{
+    width: 60%;
+    float: right;
+    span{
+      display: block;
+    }
+    .info--contact{
+
+      h2{
+        text-transform: uppercase;
+      }
     }
   }
 }
