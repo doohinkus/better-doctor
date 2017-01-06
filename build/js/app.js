@@ -10,14 +10,14 @@ Doctor.prototype.getDoctors = function (medicalIssue, displayFunction){
   $.get('https://api.betterdoctor.com/2016-03-01/doctors?query='+ medicalIssue+'&location=45.5231%2C-122.6765%2C%205&user_location=45.5231%2C-122.6765&skip=0&limit=20&user_key=' + apiKey)
    .then(function(result) {
       var data = result.data;
-      console.log(data);
+      console.log(data, " ", result);
       $("#results").empty();
 
       //output html
       return data.forEach(function (doctor){
         var ratings = "No ratings yet.";
         var ratingImage = "";
-        var phone = "";
+        var speciality = "";
         var name = doctor.profile.first_name + " " + doctor.profile.last_name + ", " + doctor.profile.title;
         var languages = "language(s): ";
         var bio = doctor.profile.bio;
@@ -39,11 +39,10 @@ Doctor.prototype.getDoctors = function (medicalIssue, displayFunction){
                     + "<span>" + practice.visit_address.zip +"</span></div>"
 
                     +"</li>"
-
-          //phone
-          practice.phones.forEach(function (phone_number){
-            phone = phone_number.number;
-          });
+        });
+        //phone
+        doctor.specialties.forEach(function (specialities){
+          speciality += "<h3>" + specialities.actor + "</h3>";
         });
       //ratings
       doctor.ratings.forEach(function (rating){
@@ -54,6 +53,8 @@ Doctor.prototype.getDoctors = function (medicalIssue, displayFunction){
       if (ratingImage === undefined){
         ratingImage="";
       }
+
+      
       var output =
       "<div class='doctor'>"
       +"<div class='info--personal'>"
@@ -61,6 +62,11 @@ Doctor.prototype.getDoctors = function (medicalIssue, displayFunction){
         +name
         +"</h2>"
         +"<img src='"+image+"''>"
+        +"<div class='title'>"
+          +"<p>"
+          +speciality
+          +"</p>"
+        +"</div>"
         +"<div class='ratings'>"
           +"<img src='"+ratingImage+"'>"
           +"<span>"
@@ -71,11 +77,6 @@ Doctor.prototype.getDoctors = function (medicalIssue, displayFunction){
           +"</p>"
         +"</div>"
       +"</div>"
-      // +"<div class='title'>"
-      //   +"<p>"
-      //   +phone
-      //   +"</p>"
-      // +"</div>"
       +"<div class='info'>"
         +"<div class='info--contact'>"
         + "<h2>"
