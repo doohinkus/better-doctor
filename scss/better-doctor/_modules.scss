@@ -9,12 +9,27 @@
 .hero{
   @extend .padding;
   .form{
-
   }
   .input{
   }
   .button{
     width: 100%;
   }
-
+}
+.doctors{
+  display: flex;
+  flex-wrap: wrap;
+  width: $width;
+  margin: auto;
+  @extend .padding;
+  .doctor{
+    width: 100%;
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    .title, .info{
+      display: flex;
+      justify-content:space-around;
+    }
+  }
 }

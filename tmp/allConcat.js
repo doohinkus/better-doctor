@@ -9,7 +9,7 @@ $(document).ready(function (){
   $("#find").click(function (){
     var ailment = $("#ailment").val();
     $("#ailment").val("");
-    doctor.getDoctors(ailment, displayDoctor);
+    doctor.getDoctors(ailment);
   });
 
 });
