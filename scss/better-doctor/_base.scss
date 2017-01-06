@@ -1,5 +1,7 @@
-body{
+@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow');
+body, h2, h1, h3{
   margin:0;
+  font-family: $font-base !important;
 }
 img{
   max-width: 100%;
