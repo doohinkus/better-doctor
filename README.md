@@ -10,6 +10,8 @@ _This page demonstrates understanding of modern Javascript applications. It uses
 
 ## Setup/Installation Requirements
 
+* _Easy way visit page on [Better Doctor](https://doohinkus.github.io/better-doctor/)
+* _Other way:_
 * _Clone repository._
 * _Open terminal (This repository requires Node.js to be installed on your machine)_
 * _From terminal navigate to repository directory._
