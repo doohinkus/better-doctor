@@ -3,6 +3,10 @@ body, h2, h1, h3{
   margin:0;
   font-family: $font-base !important;
 }
+li h3, h2, h3{
+  color: $color-secondary;
+  // cursor: pointer;
+}
 img{
   max-width: 100%;
 }

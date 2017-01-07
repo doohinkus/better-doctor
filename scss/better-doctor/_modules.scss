@@ -24,6 +24,8 @@
   margin: auto;
   @extend .padding;
   .doctor{
+    // @include animation(fadeIn);
+    animation: fadeIn .5s ease-in-out;
     border-top: 1px solid lighten($color-secondary, 40%);
     margin-top: 2em;
     margin-bottom: 2em;
@@ -42,6 +44,16 @@
 
     }
   }
+  .info--personal{
+    .ratings{
+      .rating{
+
+        color: $color-accent;
+      }
+
+    }
+  }
+
   .info{
     width: 60%;
     float: right;

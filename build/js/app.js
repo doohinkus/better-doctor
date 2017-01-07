@@ -66,7 +66,7 @@ function displayResults(medicalIssue, result){
     ratings = rating.rating;
     ratingImage = rating.image_url_small;
   });
-  //weird hack--first doc for toothache is undefined???? rest of the docotors work fine
+  //weird hack--first doc for toothache is always undefined, even when she appears in other results???? rest of the docotors work fine
   if (ratingImage === undefined){
     ratingImage="";
   }
@@ -86,7 +86,7 @@ function displayResults(medicalIssue, result){
     +"</div>"
     +"<div class='ratings'>"
       +"<img src='"+ratingImage+"'>"
-      +"<span>"
+      +"<p class='rating'>"
         + "Rating: " + ratings
       +"</p>"
       +"<p>"
